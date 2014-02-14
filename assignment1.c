@@ -1,3 +1,10 @@
+/* ========================
+   ||    Thomas Smith    ||
+   ||      tsmith37      ||
+   ||       CS 350       ||
+   ||   Assignment One   ||
+   ======================== */
+
 #include <stdio.h>
 #include <math.h>
 
@@ -20,8 +27,6 @@ int main(int argc, char *argv[])
 
   if (((argv[argc-1][0])=='1') && ((argv[argc-1][1]=='0')))
     choice = 10;
-
-  printf("%d\n\n", choice);
 
   switch(choice)
     {
@@ -87,13 +92,13 @@ void convInt(char test[])
       else
 	{
 	  current=-1;
-	  printf("Error: the character %c is not supported in this operation\n", test[i]);
+	  printf("Error: the character %c is not supported in this operation\n\n", test[i]);
 	}
       toReturn=(toReturn*10)+(isNegative*current);
       i++;
     } 
   if (current!=-1)
-    printf("%d\n", toReturn);
+    printf("%d\n\n", toReturn);
 }
 
 void convFloat(char test[])
@@ -119,7 +124,7 @@ void convFloat(char test[])
       else
 	{
 	  current=-1;
-	  printf("Error: the character %c is not supported in this operation\n", test[i]);
+	  printf("Error: the character %c is not supported in this operation\n\n", test[i]);
 	}
       whole=((whole*10)+(isNegative*current));
       i++;
@@ -136,7 +141,7 @@ void convFloat(char test[])
 	  else
 	    {
 	      current=-1;
-	      printf("Error: the character %c is not supported in this operation\n", test[i]);
+	      printf("Error: the character %c is not supported in this operation\n\n", test[i]);
 	    }
 	  inter=pow(10,decLoc-i);
 	  decimal=decimal+(isNegative*current*inter);
@@ -145,7 +150,7 @@ void convFloat(char test[])
     }
   result = whole + decimal;
   if (current!=-1)
-    printf("%2.5f\n", result);
+    printf("%2.5f\n\n", result);
 }
 
 void parse(char test[])
@@ -190,7 +195,7 @@ void toUpper(char test[])
       i++;
     }
   final[i]='\0';
-  printf("%s\n",final);
+  printf("%s\n\n",final);
 }
 
 void toLower(char test[])
@@ -206,7 +211,7 @@ void toLower(char test[])
       i++;
     }
   final[i]='\0';
-  printf("%s\n",final);
+  printf("%s\n\n",final);
 }
 
 void reverseString(char test[])
@@ -224,7 +229,7 @@ void reverseString(char test[])
       j++;
     }
   final[j]='\0';
-  printf("%s\n",final);
+  printf("%s\n\n",final);
 }
 
 void palindrome(char test[])
